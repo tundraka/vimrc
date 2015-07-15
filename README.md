@@ -7,7 +7,7 @@ My vimrc to share between my computers.
 
 # List of plugins that I use
 - The Nerd Tree
--- git clone https://github.com/scrooloose/nerdtree  ~/.vim/bundle/nerdtree
+- git clone https://github.com/scrooloose/nerdtree  ~/.vim/bundle/nerdtree
 - Fugitive
 git clone https://github.com/tpope/vim-fugitive ~/.vim/vim-fugitive
 - Syntastic
@@ -24,6 +24,15 @@ git clone https://github.com/pangloss/vim-javascript ~/.vim/bundle/vim-javascrip
 git clone https://github.com/mileszs/ack.vim ~/.vim/bundle/ack.vim
 - Vim GitGutter
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
+- Powerline fonts
+https://github.com/powerline/fonts
+
+# Powerline fonts
+The instal.sh under the powerline fonts project works.
+In Slackware I needed to follow the steps in: http://duganchen.ca/writings/slackware/fonts/
+Basically: 
+vi /etc/profile.d/lang.sh
+LANG from en_US -> en_US.UTF-8.
 
 # Colorschemes
 - https://github.com/nanotech/jellybeans.vim
