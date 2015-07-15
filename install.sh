@@ -23,6 +23,7 @@ PLUGINS=(
 )
 
 # Iterate over the list and clone
+cd $BUNDLE_DIR
 for pluginProject in "${PLUGINS[@]}"
 do
     git clone $pluginProject
