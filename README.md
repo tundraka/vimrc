@@ -7,7 +7,7 @@ My vimrc to share between my computers.
 
 # List of plugins that I use
 - The Nerd Tree
-git clone https://github.com/scrooloose/nerdtree  ~/.vim/bundle/nerdtree
+-- git clone https://github.com/scrooloose/nerdtree  ~/.vim/bundle/nerdtree
 - Fugitive
 git clone https://github.com/tpope/vim-fugitive ~/.vim/vim-fugitive
 - Syntastic
