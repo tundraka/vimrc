@@ -31,7 +31,7 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-set guifont=Monospace\ 8
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
 set ruler
 
 "Searches
@@ -89,5 +89,7 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
+
+let g:airline_powerline_fonts = 1
 
 "set autoindent
