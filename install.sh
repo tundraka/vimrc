@@ -28,3 +28,5 @@ for pluginProject in "${PLUGINS[@]}"
 do
     git clone $pluginProject
 done
+
+echo "Now is time to install AG and eslint"
