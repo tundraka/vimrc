@@ -58,6 +58,7 @@ nnoremap <leader>a :Ack
 
 " I'll probably need to move this to a session
 " ... and they didn't work
+" They worked, I needed t opress R
 let g:ctrlp_custom_ignore = {'dir': '\v[\/](node_modules|bower_components|build|release|vendor)\/*$'}
 "set wildignore+=node_modules/*,bower_components/*,build/*,release/*,vendor/*
 
@@ -79,7 +80,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 " Disabling the arrow keys: Several people mention that it's a good thing to
 " try.
-" nnoremap <up> <nop>
+" The only issue I have with this is that the autocomplete doesn't let me
+" select the word because I can switch through the options :-(
+nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>

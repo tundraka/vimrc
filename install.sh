@@ -20,12 +20,15 @@ PLUGINS=(
     "https://github.com/mileszs/ack.vim"
     "https://github.com/airblade/vim-gitgutter"
     "https://github.com/powerline/fonts"
+    "https://github.com/easymotion/vim-easymotion"
 )
 
 # Iterate over the list and clone
 cd $BUNDLE_DIR
 for pluginProject in "${PLUGINS[@]}"
 do
+    # TODO check that the directory exists before clonning, if that's the case, then
+    # update the project.
     git clone $pluginProject
 done
 
