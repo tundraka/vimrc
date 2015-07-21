@@ -21,6 +21,7 @@ PLUGINS=(
     "https://github.com/airblade/vim-gitgutter"
     "https://github.com/powerline/fonts"
     "https://github.com/easymotion/vim-easymotion"
+    "https://github.com/mattn/emmet-vim"
 )
 
 # Iterate over the list and clone
