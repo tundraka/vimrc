@@ -78,6 +78,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
+" Emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-E>'
+
 " Disabling the arrow keys: Several people mention that it's a good thing to
 " try.
 " The only issue I have with this is that the autocomplete doesn't let me
