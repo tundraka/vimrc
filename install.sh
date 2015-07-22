@@ -28,9 +28,15 @@ PLUGINS=(
 cd $BUNDLE_DIR
 for pluginProject in "${PLUGINS[@]}"
 do
-    # TODO check that the directory exists before clonning, if that's the case, then
-    # update the project.
-    git clone $pluginProject
+    dirName=`basename $pluginProject`
+    if [-d $dirName]; then
+        # TODO do I need to cd to the dir? Can I git pull from antoher directory?
+        cd $dirName
+        git pull
+        cd $OLDPWD
+    else
+        git clone $pluginProject
+    fi
 done
 
 echo "Now is time to install AG and eslint"
