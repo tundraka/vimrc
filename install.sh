@@ -30,7 +30,6 @@ for pluginProject in "${PLUGINS[@]}"
 do
     dirName=`basename $pluginProject`
     if [-d $dirName]; then
-        # TODO do I need to cd to the dir? Can I git pull from antoher directory?
         cd $dirName
         git pull
         cd $OLDPWD
