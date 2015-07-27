@@ -1,42 +1,29 @@
 # vimrc
-My vimrc to share between my computers.
+My vimrc to share between my computers. Looks like there's a practice to name
+this kind of project dotfiles... Oh well.
 
 # Good resources
-- http://vimawesome.com/plugin/vim-snippets
+- http://vimawesome.com/
 - http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
-# List of plugins that I use
-- The Nerd Tree
-- git clone https://github.com/scrooloose/nerdtree  ~/.vim/bundle/nerdtree
-- Fugitive
-git clone https://github.com/tpope/vim-fugitive ~/.vim/vim-fugitive
-- Syntastic
-git clone https://github.com/scrooloose/syntastic ~/.vim/syntastic
-- CtrlP
-git clone https://github.com/kien/ctrlp.vim ~/.vim/bundle/ctrlp.vim
-- Vim-Airline
-git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
-- NERDCommenter
-git clone https://github.com/scrooloose/nerdcommenter ~/.vim/bundle/nerdcommenter
-- Vim JavaScript
-git clone https://github.com/pangloss/vim-javascript ~/.vim/bundle/vim-javascript
-- Ack Vim
-git clone https://github.com/mileszs/ack.vim ~/.vim/bundle/ack.vim
-- Vim GitGutter
-git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
-- Powerline fonts
-https://github.com/powerline/fonts
-
 # Powerline fonts
-The instal.sh under the powerline fonts project works.
-In Slackware I needed to follow the steps in: http://duganchen.ca/writings/slackware/fonts/
+The install.sh under the [powerline fonts](https://github.com/powerline/fonts)
+project works.
+
+In Slackware I needed to follow the steps [from here](http://duganchen.ca/writings/slackware/fonts/)
+
 Basically: 
+```bash
 vi /etc/profile.d/lang.sh
 LANG from en_US -> en_US.UTF-8.
+```
 
-# Colorschemes
-- https://github.com/nanotech/jellybeans.vim
-- https://github.com/morhetz/gruvbox
+To install fonts:
+```bash
+cp *.ttf ~/.local/share/fonts
+fc-cache -f -v
+fc-list # to verify
+```
 
 # Other programs that I need
 - ESLint
