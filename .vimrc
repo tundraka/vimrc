@@ -73,11 +73,23 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_signs = 1
+" I don't want the error window to open.
+let g:syntastic_auto_loc_list = 0
+" Signs for the warning an error, stolen from the docs :-)
+"let g:syntastic_error_symbol = "✗"
+"let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_error_symbol = "×"
+let g:syntastic_warning_symbol = "»"
+" No balloons, command window is enough
+let g:syntastic_enable_balloons = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+
+
+" I want to have a shortcut to navigate the syntastic errors
+nnoremap <leader>] :lnext<cr>
+nnoremap <leader>[ :lprev<cr>
 
 " Emmet
 let g:user_emmet_install_global = 0
