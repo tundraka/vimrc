@@ -15,7 +15,7 @@ In Slackware I needed to follow the steps [from here](http://duganchen.ca/writin
 Basically: 
 ```bash
 vi /etc/profile.d/lang.sh
-LANG from en_US -> en_US.UTF-8.
+LANG from en_US -> en_US.UTF-8
 ```
 
 To install fonts:
