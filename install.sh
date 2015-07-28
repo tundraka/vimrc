@@ -22,6 +22,7 @@ PLUGINS=(
     "https://github.com/powerline/fonts"
     "https://github.com/easymotion/vim-easymotion"
     "https://github.com/mattn/emmet-vim"
+    "https://github.com/elzr/vim-json"
     # themes
     "https://github.com/nanotech/jellybeans.vim"
     "https://github.com/morhetz/gruvbox"

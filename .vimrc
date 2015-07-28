@@ -113,5 +113,6 @@ nnoremap j gj
 nnoremap k gk
 
 let g:airline_powerline_fonts = 1
+let g:vim_json_syntax_conceal = 0
 
 "set autoindent
