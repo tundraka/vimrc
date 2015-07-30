@@ -115,4 +115,8 @@ nnoremap k gk
 let g:airline_powerline_fonts = 1
 let g:vim_json_syntax_conceal = 0
 
+" I don't like that goyo doesn't wrap on words.
+" Sometimes goyo makes the cursor dissapear (MacVim)
+nnoremap <leader>s :Scratch<cr>:Goyo<cr>
+
 "set autoindent

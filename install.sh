@@ -23,6 +23,8 @@ PLUGINS=(
     "https://github.com/easymotion/vim-easymotion"
     "https://github.com/mattn/emmet-vim"
     "https://github.com/elzr/vim-json"
+    "https://github.com/junegunn/goyo.vim"
+    "https://github.com/vim-scripts/scratch.vim"
     # themes
     "https://github.com/nanotech/jellybeans.vim"
     "https://github.com/morhetz/gruvbox"
