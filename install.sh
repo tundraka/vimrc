@@ -34,7 +34,7 @@ PLUGINS=(
 cd $BUNDLE_DIR
 for pluginProject in "${PLUGINS[@]}"
 do
-    dirName=`basename $pluginProject`
+    dirName=$(basename $pluginProject)
     if [-d $dirName]; then
         cd $dirName
         git pull
@@ -45,3 +45,5 @@ do
 done
 
 echo "Now is time to install AG and eslint"
+echo "AG: https://github.com/ggreer/the_silver_searcher"
+echo "ESLint: https://github.com/eslint/eslint"
