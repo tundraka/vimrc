@@ -77,16 +77,17 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 " I don't want the error window to open.
 let g:syntastic_auto_loc_list = 0
-" Signs for the warning an error, stolen from the docs :-)
-"let g:syntastic_error_symbol = "✗"
-"let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_error_symbol = "×"
+" Signs for the warning an error
+let g:syntastic_error_symbol = ""
 let g:syntastic_warning_symbol = "»"
 " No balloons, command window is enough
 let g:syntastic_enable_balloons = 0
 " My only checker.
 let g:syntastic_javascript_checkers = ['eslint']
 let syntastic_stl_format = '[%e:%w]'
+
+" a single line for division
+set fillchars=vert:│
 
 " I want to have a shortcut to navigate the syntastic errors
 nnoremap <leader>] :lnext<cr>
