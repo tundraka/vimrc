@@ -35,12 +35,13 @@ cd $BUNDLE_DIR
 for pluginProject in "${PLUGINS[@]}"
 do
     dirName=$(basename $pluginProject)
-    if [-d $dirName]; then
+    if [ -d $dirName ]; then
         cd $dirName
         git pull
         cd $OLDPWD
     else
-        git clone $pluginProject
+        echo "Cloning $pluginProject"
+        git clone -q $pluginProject
     fi
 done
 
