@@ -40,7 +40,7 @@ do
         git pull
         cd $OLDPWD
     else
-        echo "Cloning $pluginProject"
+        echo "Cloning $dirName"
         git clone -q $pluginProject
     fi
 done
