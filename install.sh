@@ -54,7 +54,7 @@ do
     fi
 done
 
-echo "Copying .vimrc to ~/.vimrc
+echo "Copying .vimrc to ~/.vimrc"
 cp .vimrc ~/.vimrc
 
 echo "Now is time to install AG and eslint"
