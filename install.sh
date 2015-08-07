@@ -54,6 +54,9 @@ do
     fi
 done
 
+echo "Copying .vimrc to ~/.vimrc
+cp .vimrc ~/.vimrc
+
 echo "Now is time to install AG and eslint"
 echo "AG: https://github.com/ggreer/the_silver_searcher"
 echo "ESLint: https://github.com/eslint/eslint"
