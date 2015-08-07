@@ -7,11 +7,8 @@ set go-=T
 set go-=L
 set go-=r
 set go-=m
-"colors bluegreen
-"colors molokai
-"colors clouds-midnight
-"colors solarized
-"set background=dark " for solarized
+
+"colors gruvbox
 colors jellybeans
 
 nnoremap / /\v
@@ -31,7 +28,7 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
+set guifont=Input\ Mono\ Light\ 8
 set ruler
 
 "Searches
@@ -119,5 +116,10 @@ let g:vim_json_syntax_conceal = 0
 " I don't like that goyo doesn't wrap on words.
 " Sometimes goyo makes the cursor dissapear (MacVim)
 nnoremap <leader>s :Scratch<cr>:Goyo<cr>
+
+" Snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "set autoindent

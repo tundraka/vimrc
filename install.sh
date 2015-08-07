@@ -9,23 +9,32 @@ mkdir -p $AUTOLOAD_DIR $BUNDLE_DIR
 curl -LSso $AUTOLOAD_DIR/pathogen.vim https://tpo.pe/pathogen.vim
 
 # The plugins.
+# Removing the powerline fonts, I will use the InputMono fonts from:
+# http://input.fontbureau.com/
+# "https://github.com/powerline/fonts"
+
 PLUGINS=(
     "https://github.com/bling/vim-airline"
-    "https://github.com/tpope/vim-fugitive"
-    "https://github.com/scrooloose/nerdtree"
-    "https://github.com/scrooloose/syntastic"
-    "https://github.com/kien/ctrlp.vim"
-    "https://github.com/scrooloose/nerdcommenter"
-    "https://github.com/pangloss/vim-javascript"
-    "https://github.com/mileszs/ack.vim"
-    "https://github.com/airblade/vim-gitgutter"
-    "https://github.com/powerline/fonts"
     "https://github.com/easymotion/vim-easymotion"
-    "https://github.com/mattn/emmet-vim"
-    "https://github.com/elzr/vim-json"
     "https://github.com/junegunn/goyo.vim"
     "https://github.com/vim-scripts/scratch.vim"
-    # themes
+
+    "https://github.com/airblade/vim-gitgutter"
+    "https://github.com/tpope/vim-fugitive"
+
+    "https://github.com/pangloss/vim-javascript"
+    "https://github.com/elzr/vim-json"
+
+    "https://github.com/kien/ctrlp.vim"
+    "https://github.com/scrooloose/nerdtree"
+    "https://github.com/mileszs/ack.vim"
+
+    "https://github.com/scrooloose/syntastic"
+    "https://github.com/scrooloose/nerdcommenter"
+    "https://github.com/mattn/emmet-vim"
+    "https://github.com/honza/vim-snippets"
+    "https://github.com/SirVer/ultisnips"
+
     "https://github.com/nanotech/jellybeans.vim"
     "https://github.com/morhetz/gruvbox"
 )
