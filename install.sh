@@ -59,7 +59,10 @@ do
 done
 
 echo "Copying .vimrc to ~/.vimrc"
-cp .vimrc ~/.vimrc
+cp ./.vimrc ~/.vimrc
+
+# TODO try differentiate linux/mac in order to install the following programs
+# if [ $(uname -s) = 'Darwin' ]; then
 
 echo "Now is time to install AG and eslint"
 echo "AG: https://github.com/ggreer/the_silver_searcher"
