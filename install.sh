@@ -61,9 +61,17 @@ done
 echo "Copying .vimrc to ~/.vimrc"
 cp ./.vimrc ~/.vimrc
 
-# TODO try differentiate linux/mac in order to install the following programs
-# if [ $(uname -s) = 'Darwin' ]; then
+if [ $(uname -s) = 'Darwin' ]; then
+    if [ -z $(which brew) ]; then
+        echo "Installing Homebrew"
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
 
-echo "Now is time to install AG and eslint"
-echo "AG: https://github.com/ggreer/the_silver_searcher"
+    if [ -z $(which ag) ]; then
+        echo "Installing ag"
+        brew install the_silver_searcher
+    fi
+fi
+
+echo "Now is time to install eslint"
 echo "ESLint: https://github.com/eslint/eslint"
