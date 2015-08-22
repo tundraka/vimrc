@@ -52,6 +52,8 @@ au FocusLost * :wa
 nnoremap <leader><space> :CtrlP<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
 nnoremap <leader>a :Ack 
+nnoremap <leader>gv :Gstatus<cr>
+nnoremap <leader>gt :Gpush origin master<cr>
 
 " I'll probably need to move this to a session
 " ... and they didn't work
