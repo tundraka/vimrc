@@ -22,6 +22,7 @@ PLUGINS=(
     "https://github.com/easymotion/vim-easymotion"
     "https://github.com/junegunn/goyo.vim"
     "https://github.com/vim-scripts/scratch.vim"
+    "https://github.com/mattn/calendar-vim"
 
     "https://github.com/airblade/vim-gitgutter"
     "https://github.com/tpope/vim-fugitive"

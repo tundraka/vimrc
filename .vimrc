@@ -54,6 +54,7 @@ nnoremap <leader>t :NERDTreeToggle<cr>
 nnoremap <leader>a :Ack 
 nnoremap <leader>gv :Gstatus<cr>
 nnoremap <leader>gt :Gpush origin master<cr>
+nnoremap <leader>c :CalendarH<cr>
 
 " I'll probably need to move this to a session
 " ... and they didn't work
