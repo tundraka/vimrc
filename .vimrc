@@ -27,6 +27,8 @@ set gdefault
 
 " For vim-airlne to appear.
 set laststatus=2
+" For vim-airline to not display the mode.
+set noshowmode
 
 set backupdir=~/tmp,.
 set directory=~/tmp,.
@@ -38,6 +40,8 @@ set colorcolumn=85
 set list
 set listchars=tab:▸\ ,eol:¬
 
+" This works in my Linux, but I always need to change this in my Mac laps.
+" There should be a way to detect the OS in here.
 set guifont=Input\ Mono\ Light\ 8
 set ruler
 
