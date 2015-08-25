@@ -3,22 +3,30 @@ syntax on
 filetype plugin indent on
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+set nocompatible
+set modelines=0
+
 set go-=T
 set go-=L
 set go-=r
 set go-=m
 
 "colors gruvbox
+"set background=dark
 colors jellybeans
 
 nnoremap / /\v
 vnoremap / /\v
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set relativenumber
 set gdefault
+
+" For vim-airlne to appear.
+set laststatus=2
 
 set backupdir=~/tmp,.
 set directory=~/tmp,.
@@ -27,6 +35,8 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
+set list
+set listchars=tab:▸\ ,eol:¬
 
 set guifont=Input\ Mono\ Light\ 8
 set ruler
@@ -55,10 +65,16 @@ nnoremap <leader>a :Ack
 nnoremap <leader>gv :Gstatus<cr>
 nnoremap <leader>gt :Gpush origin master<cr>
 nnoremap <leader>c :CalendarH<cr>
+" I don't like that goyo doesn't wrap on words.
+" Sometimes goyo makes the cursor dissapear (MacVim)
+nnoremap <leader>s :Scratch<cr>:Goyo<cr>
+" I want to have a shortcut to navigate the syntastic errors
+nnoremap <leader>] :lnext<cr>
+nnoremap <leader>[ :lprev<cr>
 
 " I'll probably need to move this to a session
 " ... and they didn't work
-" They worked, I needed t opress R
+" They worked, I needed topress R
 let g:ctrlp_custom_ignore = {'dir': '\v[\/](node_modules|bower_components|build|release|vendor)\/*$'}
 "set wildignore+=node_modules/*,bower_components/*,build/*,release/*,vendor/*
 
@@ -89,10 +105,6 @@ let syntastic_stl_format = '[%e:%w]'
 " a single line for division
 set fillchars=vert:│
 
-" I want to have a shortcut to navigate the syntastic errors
-nnoremap <leader>] :lnext<cr>
-nnoremap <leader>[ :lprev<cr>
-
 " Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
@@ -116,13 +128,7 @@ nnoremap k gk
 let g:airline_powerline_fonts = 1
 let g:vim_json_syntax_conceal = 0
 
-" I don't like that goyo doesn't wrap on words.
-" Sometimes goyo makes the cursor dissapear (MacVim)
-nnoremap <leader>s :Scratch<cr>:Goyo<cr>
-
 " Snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-"set autoindent
