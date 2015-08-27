@@ -69,10 +69,9 @@ nnoremap <leader>a :Ack
 nnoremap <leader>gv :Gstatus<cr>
 nnoremap <leader>gt :Gpush origin master<cr>
 nnoremap <leader>c :CalendarH<cr>
-" I don't like that goyo doesn't wrap on words.
 " Sometimes goyo makes the cursor dissapear (MacVim)
 nnoremap <leader>s :Scratch<cr>:Goyo<cr>
-" I want to have a shortcut to navigate the syntastic errors
+" navigate syntastic errors
 nnoremap <leader>] :lnext<cr>
 nnoremap <leader>[ :lprev<cr>
 

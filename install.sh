@@ -13,10 +13,6 @@ curl -LSso $AUTOLOAD_DIR/pathogen.vim https://tpo.pe/pathogen.vim
 # http://input.fontbureau.com/
 # "https://github.com/powerline/fonts"
 
-
-# NOTE. Consider exploring the following plugins
-# https://github.com/itchyny/calendar.vim
-
 PLUGINS=(
     "https://github.com/bling/vim-airline"
     "https://github.com/easymotion/vim-easymotion"
@@ -51,6 +47,7 @@ do
     dirName=$(basename $pluginProject)
     if [ -d $dirName ]; then
         cd $dirName
+        echo "Updating $dirName"
         git pull
         cd $OLDPWD
     else
