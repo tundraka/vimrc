@@ -74,6 +74,8 @@ nnoremap <leader>s :Scratch<cr>:Goyo<cr>
 " navigate syntastic errors
 nnoremap <leader>] :lnext<cr>
 nnoremap <leader>[ :lprev<cr>
+" Activates spelling in vim
+nnoremap <leader>e :setlocal spell spelllang=en_us<cr>
 
 " I'll probably need to move this to a session
 " ... and they didn't work
