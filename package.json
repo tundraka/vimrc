@@ -6,6 +6,7 @@
     "homepage": "https://github.com/tundraka",
     "license": "Public domain",
     "author": "tundraka <tundraka@gmail.com> (https://github.com/tundraka)",
+    "private": true,
     "repository": {
         "type": "git",
         "url": "https://github.com/tundraka/vimrc"
