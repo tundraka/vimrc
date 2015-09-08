@@ -9,6 +9,7 @@ this kind of project dotfiles... Oh well.
 - https://docs.npmjs.com/files/package.json
 - [For when I use emmet][3]
 - [ESLint][4]
+- [Spelling in vim][5]
 
 # Powerline fonts
 The install.sh under the [powerline fonts][1]
@@ -33,3 +34,4 @@ fc-list # to verify
 [2]: http://duganchen.ca/writings/slackware/fonts/
 [3]: http://www.smashingmagazine.com/2013/03/26/goodbye-zen-coding-hello-emmet/
 [4]: https://github.com/eslint/eslint
+[5]: https://www.linux.com/learn/tutorials/357267-using-spell-checking-in-vim
