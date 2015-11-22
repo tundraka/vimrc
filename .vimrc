@@ -139,3 +139,7 @@ let g:vim_json_syntax_conceal = 0
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+
+" jsx: jsx in javascript files.
+let g:jsx_ext_required = 0
