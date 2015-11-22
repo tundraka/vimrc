@@ -56,8 +56,13 @@ do
     fi
 done
 
-echo "Copying .vimrc to ~/.vimrc"
-cp ./.vimrc ~/.vimrc
+echo "Linking ~/.vimrc to .vimrc"
+if [ -z $HOME/.vimrc ]; then
+    currentDir=$(pwd)
+    ln -s $currentDir/.vimrc $HOME/.vimrc
+else
+    echo "~/.vimrc already exist, link manually"
+fi
 
 if [ $(uname -s) = 'Darwin' ]; then
     if [ -z $(which brew) ]; then
