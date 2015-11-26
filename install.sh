@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VIM_DIR=~/.vim
+VIM_DIR=$HOME/.vim
 BUNDLE_DIR=$VIM_DIR/bundle
 AUTOLOAD_DIR=$VIM_DIR/autoload
 
@@ -34,6 +34,9 @@ PLUGINS=(
     "https://github.com/scrooloose/syntastic"
     "https://github.com/scrooloose/nerdcommenter"
     "https://github.com/mattn/emmet-vim"
+
+    "https://github.com/tomtom/tlib_vim.git"
+    "https://github.com/MarcWeber/vim-addon-mw-utils.git"
     "https://github.com/honza/vim-snippets"
     "https://github.com/SirVer/ultisnips"
 
