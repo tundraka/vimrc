@@ -71,14 +71,22 @@ fi
 if [ $(uname -s) = 'Darwin' ]; then
     if [ -z $(which brew) ]; then
         echo "Installing Homebrew"
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        hb="https://raw.githubusercontent.com/Homebrew/install/master/install"
+        ruby -e "$(curl -fsSL $hb)"
     fi
 
     if [ -z $(which ag) ]; then
         echo "Installing ag"
         brew install the_silver_searcher
     fi
-fi
 
-echo "Now is time to install eslint"
-echo "ESLint: https://github.com/eslint/eslint"
+    if [ $(which npm) ]; then
+        if [ -z $(which eslint) ]; then
+            echo "Installing eslint"
+            npm install -g eslint
+        fi
+    else
+        echo "npm not found, the following packages weren't installed."
+        echo "ESLint: https://github.com/eslint/eslint"
+    fi
+fi

@@ -140,6 +140,3 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=[$HOME."/Documents/code/snippets"]
-
-" jsx: jsx in javascript files.
-let g:jsx_ext_required = 0
