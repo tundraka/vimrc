@@ -26,6 +26,8 @@ PLUGINS=(
     "https://github.com/pangloss/vim-javascript"
     "https://github.com/elzr/vim-json"
     "https://github.com/mxw/vim-jsx"
+    "https://github.com/mustache/vim-mustache-handlebars.git"
+    "https://github.com/isRuslan/vim-es6.git"
 
     "https://github.com/kien/ctrlp.vim"
     "https://github.com/scrooloose/nerdtree"
