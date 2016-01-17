@@ -9,3 +9,5 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 export CLICOLOR=TRUE
 export LSCOLORS=Cxfxbxdxcxegedabagacad
 
+export GRADLE_HOME="/usr/local/dev/gradle"
+export PATH=$PATH:$GRADLE_HOME/bin
