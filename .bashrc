@@ -3,6 +3,9 @@
 # work.
 alias ls="ls --color"
 
+# Running node binaries without a global install
+alias npm-exec='PATH=$(npm bin):$PATH'
+
 export CLICOLOR=TRUE
 export LSCOLORS=Cxfxbxdxcxegedabagacad
 
