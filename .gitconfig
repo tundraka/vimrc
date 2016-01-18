@@ -1,4 +1,4 @@
 
 [user]
 	name = tundraka
-	email = tundraka@gmail.com
+	email = %github.email%
