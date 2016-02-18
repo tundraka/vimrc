@@ -12,6 +12,7 @@ curl -LSso $AUTOLOAD_DIR/pathogen.vim https://tpo.pe/pathogen.vim
 # Removing the powerline fonts, I will use the InputMono fonts from:
 # http://input.fontbureau.com/
 # "https://github.com/powerline/fonts"
+# Testing.
 
 PLUGINS=(
     # Utils
