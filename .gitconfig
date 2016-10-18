@@ -2,3 +2,5 @@
 [user]
 	name = tundraka
 	email = %github.email%
+[alias]
+    files = diff-tree --no-commit-id --name-only -r

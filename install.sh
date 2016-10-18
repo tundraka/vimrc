@@ -55,6 +55,7 @@ PLUGINS=(
     # Other
     "https://github.com/tfnico/vim-gradle"
     "https://github.com/dleonard0/pony-vim-syntax"
+    "https://github.com/jwalton512/vim-blade"
 )
 
 # Iterate over the list and clone
