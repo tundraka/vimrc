@@ -114,7 +114,7 @@ set fillchars=vert:│
 
 " Emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,html.handlebars,html.mustache EmmetInstall
+autocmd FileType html,css,html.handlebars,html.mustache,blade.php EmmetInstall
 let g:user_emmet_leader_key='<C-E>'
 
 " Disabling the arrow keys: Several people mention that it's a good thing to
