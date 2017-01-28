@@ -140,3 +140,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=[$HOME."/Documents/code/snippets"]
+
+" JS
+let g:javascript_conceal_function = "ƒ"
+let g:javascript_conceal_return = "⇚"
+let g:javascript_conceal_arrow_function = "⇒"
+map <leader>j :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
