@@ -139,7 +139,7 @@ let g:vim_json_syntax_conceal = 0
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetDirectories=[$HOME."/Documents/code/snippets"]
+let g:UltiSnipsSnippetDirectories=[$HOME."/Code/tundraka/snippets"]
 
 " JS
 let g:javascript_conceal_function = "ƒ"

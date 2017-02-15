@@ -42,6 +42,7 @@ PLUGINS=(
     "https://github.com/mustache/vim-mustache-handlebars.git"
     "https://github.com/isRuslan/vim-es6.git"
     "https://github.com/othree/javascript-libraries-syntax.vim"
+    "https://github.com/posva/vim-vue"
 
     # Snippets
     "https://github.com/tomtom/tlib_vim.git"
