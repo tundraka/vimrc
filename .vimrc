@@ -146,3 +146,6 @@ let g:javascript_conceal_function = "ƒ"
 let g:javascript_conceal_return = "⇚"
 let g:javascript_conceal_arrow_function = "⇒"
 map <leader>j :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+
+" nginx
+au BufRead,BufNewFile /etc/nginx/* if &ft == '' | setfiletype nginx | endif 
