@@ -25,6 +25,7 @@ PLUGINS=(
     "https://github.com/scrooloose/syntastic"
     "https://github.com/scrooloose/nerdcommenter"
     "https://github.com/mattn/emmet-vim"
+    "https://github.com/majutsushi/tagbar"
 
     # Utils random
     "https://github.com/junegunn/goyo.vim"
@@ -84,6 +85,14 @@ if [ -z $HOME/.vimrc ]; then
     ln -s $currentDir/.vimrc $HOME/.vimrc
 else
     echo "~/.vimrc already exist, link manually"
+fi
+
+echo "Linking ~/.tmux.conf to .tmux.conf"
+if []; then
+    currentDir=$(pwd)
+    ln -s $currentDir/.tmux.conf $HOME/.tmux.conf
+else
+    echo "Unable to link do it yourself!"
 fi
 
 if [ $(uname -s) = 'Darwin' ]; then
