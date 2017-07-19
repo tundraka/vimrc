@@ -148,4 +148,4 @@ let g:javascript_conceal_arrow_function = "⇒"
 map <leader>j :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
 " nginx
-au BufRead,BufNewFile /etc/nginx/* if &ft == '' | setfiletype nginx | endif 
+au BufRead,BufNewFile */nginx/* if &ft == '' | setfiletype nginx | endif 
