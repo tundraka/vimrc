@@ -37,14 +37,9 @@ PLUGINS=(
     "https://github.com/tpope/vim-fugitive"
 
     # Javascript
-    "https://github.com/pangloss/vim-javascript"
-    #"https://github.com/elzr/vim-json"
-    #"https://github.com/mxw/vim-jsx"
-    #"https://github.com/mustache/vim-mustache-handlebars.git"
+    "https://github.com/kchmck/vim-coffee-script"
     "https://github.com/isRuslan/vim-es6.git"
     "https://github.com/othree/javascript-libraries-syntax.vim"
-    "https://github.com/posva/vim-vue"
-    "https://github.com/kchmck/vim-coffee-script"
 
     # Snippets
     "https://github.com/tomtom/tlib_vim.git"
@@ -59,8 +54,15 @@ PLUGINS=(
     # Other
     "https://github.com/tfnico/vim-gradle"
     "https://github.com/dleonard0/pony-vim-syntax"
+    "https://github.com/vim-scripts/nginx.vim.git"
+
+    # Polyglot
+    "https://github.com/posva/vim-vue"
     #"https://github.com/jwalton512/vim-blade"
-    https://github.com/vim-scripts/nginx.vim.git
+    "https://github.com/pangloss/vim-javascript"
+    #"https://github.com/elzr/vim-json"
+    #"https://github.com/mxw/vim-jsx"
+    #"https://github.com/mustache/vim-mustache-handlebars.git"
 )
 
 # Iterate over the list and clone
