@@ -37,13 +37,12 @@ PLUGINS=(
     "https://github.com/tpope/vim-fugitive"
 
     # Javascript
-    "https://github.com/kchmck/vim-coffee-script"
-    "https://github.com/isRuslan/vim-es6.git"
+    "https://github.com/isRuslan/vim-es6"
     "https://github.com/othree/javascript-libraries-syntax.vim"
 
     # Snippets
-    "https://github.com/tomtom/tlib_vim.git"
-    "https://github.com/MarcWeber/vim-addon-mw-utils.git"
+    "https://github.com/tomtom/tlib_vim"
+    "https://github.com/MarcWeber/vim-addon-mw-utils"
     "https://github.com/honza/vim-snippets"
     "https://github.com/SirVer/ultisnips"
 
@@ -54,19 +53,27 @@ PLUGINS=(
     # Other
     "https://github.com/tfnico/vim-gradle"
     "https://github.com/dleonard0/pony-vim-syntax"
-    "https://github.com/vim-scripts/nginx.vim.git"
+    "https://github.com/vim-scripts/nginx.vim"
+
 
     # Polyglot
+    "https://github.com/sheerun/vim-polyglot"
+)
+
+REMOVED=(
+    "https://github.com/jwalton512/vim-blade"
+    "https://github.com/elzr/vim-json"
+    "https://github.com/mxw/vim-jsx"
+    "https://github.com/mustache/vim-mustache-handlebars"
     "https://github.com/posva/vim-vue"
-    #"https://github.com/jwalton512/vim-blade"
     "https://github.com/pangloss/vim-javascript"
-    #"https://github.com/elzr/vim-json"
-    #"https://github.com/mxw/vim-jsx"
-    #"https://github.com/mustache/vim-mustache-handlebars.git"
+    "https://github.com/kchmck/vim-coffee-script"
 )
 
 # Iterate over the list and clone
+echo "Installing plugins"
 cd $BUNDLE_DIR
+
 for pluginProject in "${PLUGINS[@]}"
 do
     dirName=$(basename $pluginProject)
@@ -77,7 +84,20 @@ do
         cd $OLDPWD
     else
         echo "Cloning $dirName"
-        git clone -q $pluginProject
+        git clone -q $pluginProject $dirName
+    fi
+done
+
+echo "Removing plugins"
+cd $BUNDLE_DIR
+
+for pluginProject in "${REMOVED[@]}"
+do
+    dirName=$(basename $pluginProject)
+    if [ -d $dirName ]; then
+        echo "Removing plugin: $dirName"
+        rm -rf $dirName
+        cd $OLDPWD
     fi
 done
 
@@ -90,7 +110,7 @@ else
 fi
 
 echo "Linking ~/.tmux.conf to .tmux.conf"
-if []; then
+if [ -z $HOME/.tmux.conf ]; then
     currentDir=$(pwd)
     ln -s $currentDir/.tmux.conf $HOME/.tmux.conf
 else
