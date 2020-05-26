@@ -1,7 +1,7 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set vb t_vb=
 
 set nocompatible
 set modelines=0
@@ -11,9 +11,20 @@ set go-=L
 set go-=r
 set go-=m
 
-"colors gruvbox
 "set background=dark
 colors jellybeans
+"colors gruvbox
+"colors seoul256
+
+" Palenight configuration:
+"set background=dark
+"colorscheme palenight
+let g:lightline.colorscheme = 'palenight'
+
+" Italics for my favorite color scheme
+" let g:palenight_terminal_italics=1
+
+" End Palenight configuration.
 
 nnoremap / /\v
 vnoremap / /\v
@@ -45,6 +56,8 @@ set listchars=tab:▸\ ,eol:¬
 "set guifont=Input\ Mono\ Light\ 8
 " For my macs
 set guifont=InputMono\ Thin:h11
+"set macligatures
+"set guifont=Fira\ Code\ Light:h12
 set ruler
 
 "Searches
@@ -65,7 +78,7 @@ au FocusLost * :wa
 
 "let g:mustache_abbreviations = 1
 
-nnoremap <leader><space> :CtrlP<cr>
+nnoremap <leader><space> :FZF<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
 nnoremap <leader>a :Ack 
 nnoremap <leader>gv :Gstatus<cr>
@@ -73,79 +86,28 @@ nnoremap <leader>gt :Gpush origin master<cr>
 nnoremap <leader>c :CalendarH<cr>
 " Sometimes goyo makes the cursor dissapear (MacVim)
 nnoremap <leader>s :Scratch<cr>:Goyo<cr>
-" navigate syntastic errors
-nnoremap <leader>] :lnext<cr>
-nnoremap <leader>[ :lprev<cr>
 " Activates spelling in vim
 nnoremap <leader>e :setlocal spell spelllang=en_us<cr>
-
-" I'll probably need to move this to a session
-" ... and they didn't work
-" They worked, I needed topress R
-let g:ctrlp_custom_ignore = {'dir': '\v[\/](node_modules|bower_components|build|release|vendor)\/*$'}
-"set wildignore+=node_modules/*,bower_components/*,build/*,release/*,vendor/*
-
-" For Ack to use the_silver_searcher
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
-" I don't want the error window to open.
-let g:syntastic_auto_loc_list = 0
-" Signs for the warning an error
-let g:syntastic_error_symbol = ""
-let g:syntastic_warning_symbol = "»"
-" No balloons, command window is enough
-let g:syntastic_enable_balloons = 0
-" My only checker.
-let g:syntastic_javascript_checkers = ['eslint']
-let syntastic_stl_format = '[%e:%w]'
 
 " a single line for division
 set fillchars=vert:│
 
 " Emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,html.handlebars,html.mustache,blade EmmetInstall
+autocmd FileType html,css,html.handlebars,html.mustache,blade,vue EmmetInstall
 let g:user_emmet_leader_key='<C-E>'
 
-" Disabling the arrow keys: Several people mention that it's a good thing to
-" try.
-" The only issue I have with this is that the autocomplete doesn't let me
-" select the word because I can switch through the options :-(
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
 let g:airline_powerline_fonts = 1
 let g:vim_json_syntax_conceal = 0
 
-" Snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetDirectories=[$HOME."/Code/tundraka/snippets"]
-
-" JS
-let g:javascript_conceal_function = "ƒ"
-let g:javascript_conceal_return = "⇚"
-let g:javascript_conceal_arrow_function = "⇒"
-map <leader>j :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
-
 " nginx
 au BufRead,BufNewFile */nginx/* if &ft == '' | setfiletype nginx | endif 
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:polyglot_disabled = ['jsx', 'cjsx']
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+let python_highlight_all=1

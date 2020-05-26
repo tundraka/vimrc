@@ -15,17 +15,15 @@ curl -LSso $AUTOLOAD_DIR/pathogen.vim https://tpo.pe/pathogen.vim
 
 PLUGINS=(
     # Utils
-    "https://github.com/kien/ctrlp.vim"
     "https://github.com/scrooloose/nerdtree"
-    "https://github.com/mileszs/ack.vim"
     "https://github.com/bling/vim-airline"
     "https://github.com/easymotion/vim-easymotion"
+    "https://github.com/junegunn/fzf"
+    "https://github.com/junegunn/fzf.vim"
 
     # Dev utils
-    "https://github.com/scrooloose/syntastic"
     "https://github.com/scrooloose/nerdcommenter"
     "https://github.com/mattn/emmet-vim"
-    "https://github.com/majutsushi/tagbar"
 
     # Utils random
     "https://github.com/junegunn/goyo.vim"
@@ -40,21 +38,11 @@ PLUGINS=(
     "https://github.com/isRuslan/vim-es6"
     "https://github.com/othree/javascript-libraries-syntax.vim"
 
-    # Snippets
-    "https://github.com/tomtom/tlib_vim"
-    "https://github.com/MarcWeber/vim-addon-mw-utils"
-    "https://github.com/honza/vim-snippets"
-    "https://github.com/SirVer/ultisnips"
-
     # Themes
     "https://github.com/nanotech/jellybeans.vim"
     "https://github.com/morhetz/gruvbox"
-
-    # Other
-    "https://github.com/tfnico/vim-gradle"
-    "https://github.com/dleonard0/pony-vim-syntax"
-    "https://github.com/vim-scripts/nginx.vim"
-
+    "https://github.com/junegunn/seoul256.vim"
+    "https://github.com/drewtempelmeyer/palenight.vim"
 
     # Polyglot
     "https://github.com/sheerun/vim-polyglot"
@@ -68,6 +56,23 @@ REMOVED=(
     "https://github.com/posva/vim-vue"
     "https://github.com/pangloss/vim-javascript"
     "https://github.com/kchmck/vim-coffee-script"
+    "https://github.com/drewtempelmeyer/palenight.vim"
+    "https://github.com/tfnico/vim-gradle"
+    "https://github.com/jparise/vim-graphql"
+    "https://github.com/Valloric/YouCompleteMe.git"
+    "https://github.com/kien/ctrlp.vim"
+    "https://github.com/mileszs/ack.vim"
+
+    "https://github.com/tomtom/tlib_vim"
+    "https://github.com/MarcWeber/vim-addon-mw-utils"
+    "https://github.com/honza/vim-snippets"
+    "https://github.com/SirVer/ultisnips"
+
+    "https://github.com/scrooloose/syntastic"
+    "https://github.com/majutsushi/tagbar"
+
+    "https://github.com/dleonard0/pony-vim-syntax"
+    "https://github.com/vim-scripts/nginx.vim"
 )
 
 # Iterate over the list and clone
@@ -109,14 +114,20 @@ else
     echo "~/.vimrc already exist, link manually"
 fi
 
+#
+# tmux configuration
+#
 echo "Linking ~/.tmux.conf to .tmux.conf"
 if [ -z $HOME/.tmux.conf ]; then
     currentDir=$(pwd)
     ln -s $currentDir/.tmux.conf $HOME/.tmux.conf
 else
-    echo "Unable to link do it yourself!"
+    echo "Unable to link tmux conf."
 fi
 
+#
+# Installing brew programs
+#
 if [ $(uname -s) = 'Darwin' ]; then
     if [ -z $(which brew) ]; then
         echo "Installing Homebrew"
@@ -124,9 +135,20 @@ if [ $(uname -s) = 'Darwin' ]; then
         ruby -e "$(curl -fsSL $hb)"
     fi
 
-    if [ -z $(which ag) ]; then
-        echo "Installing ag"
-        brew install the_silver_searcher
+    if [ $(which brew) ]; then
+        brewPrograms=("fzf" "ripgrep")
+
+        for program in "${brewPrograms[@]}"
+        do
+            if [ -z $(which $program) ]; then
+                echo "Installing ${program}"
+                brew install $program
+            else
+                echo "${program} already installed"
+            fi
+        done
+    else
+        echo "brew not installed, several programs weren't installed."
     fi
 
     if [ $(which npm) ]; then
