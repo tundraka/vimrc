@@ -78,9 +78,9 @@ au FocusLost * :wa
 
 "let g:mustache_abbreviations = 1
 
-nnoremap <leader><space> :FZF<cr>
+nnoremap <leader><space> :Files<cr>
 nnoremap <leader>t :NERDTreeToggle<cr>
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Rg
 nnoremap <leader>gv :Gstatus<cr>
 nnoremap <leader>gt :Gpush origin master<cr>
 nnoremap <leader>c :CalendarH<cr>
@@ -109,5 +109,5 @@ au BufRead,BufNewFile */nginx/* if &ft == '' | setfiletype nginx | endif
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:polyglot_disabled = ['jsx', 'cjsx']
 
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 let python_highlight_all=1
