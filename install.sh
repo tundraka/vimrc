@@ -16,7 +16,7 @@ curl -LSso $AUTOLOAD_DIR/pathogen.vim https://tpo.pe/pathogen.vim
 PLUGINS=(
     # Utils
     "https://github.com/scrooloose/nerdtree"
-    "https://github.com/bling/vim-airline"
+    "https://github.com/itchyny/lightline.vim"
     "https://github.com/easymotion/vim-easymotion"
     "https://github.com/junegunn/fzf"
     "https://github.com/junegunn/fzf.vim"
@@ -62,6 +62,7 @@ REMOVED=(
     "https://github.com/Valloric/YouCompleteMe.git"
     "https://github.com/kien/ctrlp.vim"
     "https://github.com/mileszs/ack.vim"
+    "https://github.com/bling/vim-airline"
 
     "https://github.com/tomtom/tlib_vim"
     "https://github.com/MarcWeber/vim-addon-mw-utils"

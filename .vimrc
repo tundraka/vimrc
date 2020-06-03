@@ -19,7 +19,6 @@ colors jellybeans
 " Palenight configuration:
 "set background=dark
 "colorscheme palenight
-let g:lightline.colorscheme = 'palenight'
 
 " Italics for my favorite color scheme
 " let g:palenight_terminal_italics=1
@@ -85,7 +84,7 @@ nnoremap <leader>gv :Gstatus<cr>
 nnoremap <leader>gt :Gpush origin master<cr>
 nnoremap <leader>c :CalendarH<cr>
 " Sometimes goyo makes the cursor dissapear (MacVim)
-nnoremap <leader>s :Scratch<cr>:Goyo<cr>
+"nnoremap <leader>s :Scratch<cr>:Goyo<cr>
 " Activates spelling in vim
 nnoremap <leader>e :setlocal spell spelllang=en_us<cr>
 
@@ -100,7 +99,6 @@ let g:user_emmet_leader_key='<C-E>'
 nnoremap j gj
 nnoremap k gk
 
-let g:airline_powerline_fonts = 1
 let g:vim_json_syntax_conceal = 0
 
 " nginx
@@ -111,3 +109,14 @@ let g:polyglot_disabled = ['jsx', 'cjsx']
 
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 let python_highlight_all=1
+
+
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'gitbranch' ], [ 'filename', 'modified' ] ],
+      \   'right': [ [ 'percent' ], [ 'lineinfo'] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
