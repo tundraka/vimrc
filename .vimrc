@@ -2,6 +2,7 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 set vb t_vb=
+set termguicolors
 
 set nocompatible
 set modelines=0
@@ -11,19 +12,23 @@ set go-=L
 set go-=r
 set go-=m
 
-"set background=dark
-colors jellybeans
-"colors gruvbox
-"colors seoul256
+set background=dark
 
 " Palenight configuration:
-"set background=dark
+let g:palenight_terminal_italics=1
 "colorscheme palenight
-
-" Italics for my favorite color scheme
-" let g:palenight_terminal_italics=1
-
 " End Palenight configuration.
+
+" Start forest_night
+let g:forest_night_enable_italic = 1
+let g:forest_night_disable_italic_comment = 1
+colorscheme forest-night
+" End forest_night
+
+"set background=dark
+"colors jellybeans
+"colors gruvbox
+"colors seoul256
 
 nnoremap / /\v
 vnoremap / /\v
@@ -112,6 +117,7 @@ let python_highlight_all=1
 
 
 let g:lightline = {
+      \ 'colorscheme': 'forest_night',
       \ 'active': {
       \   'left': [ [ 'gitbranch' ], [ 'filename', 'modified' ] ],
       \   'right': [ [ 'percent' ], [ 'lineinfo'] ]

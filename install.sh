@@ -43,6 +43,7 @@ PLUGINS=(
     "https://github.com/morhetz/gruvbox"
     "https://github.com/junegunn/seoul256.vim"
     "https://github.com/drewtempelmeyer/palenight.vim"
+    "https://github.com/sainnhe/forest-night"
 
     # Polyglot
     "https://github.com/sheerun/vim-polyglot"
@@ -56,7 +57,6 @@ REMOVED=(
     "https://github.com/posva/vim-vue"
     "https://github.com/pangloss/vim-javascript"
     "https://github.com/kchmck/vim-coffee-script"
-    "https://github.com/drewtempelmeyer/palenight.vim"
     "https://github.com/tfnico/vim-gradle"
     "https://github.com/jparise/vim-graphql"
     "https://github.com/Valloric/YouCompleteMe.git"
